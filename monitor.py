@@ -6,6 +6,7 @@ directory = r"C:\Users\kamas\OneDrive\Desktop\Test"
 def monitor_directory(directory, log_file="log.txt"): 
     try: 
         with open(log_file, "a") as log:
+            log.write("Filename | Size (KB) | Timestamp\n")
             for filename in os.listdir(directory):
                 filepath = os.path.join(directory, filename)
                 if os.path.isfile(filepath):
